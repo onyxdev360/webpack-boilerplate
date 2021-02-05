@@ -3,12 +3,13 @@
   "version": "2.0.0",
   "description": "Sensible webpack 5 boilerplate using Babel and PostCSS with a hot dev server and an optimized production build.",
   "main": "index.js",
-  "author": "Tania Rascia",
+  "author": "Travis Yeargin",
   "license": "MIT",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "lint": "eslint . src config || true"
+    "lint": "eslint . src config || true",
+    "demo": "cd dist && http-server"
   },
   "keywords": [
     "webpack",
@@ -48,6 +49,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:taniarascia/webpack-boilerplate"
+    "url": "git@github.com:onyxdev360/webpack-boilerplate"
   }
 }
