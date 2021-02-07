@@ -9,10 +9,11 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-@import 'vendors/normalize';
-
 @import 'base/base';
 @import 'base/type';
+@import 'base/headings';
+@import 'base/lists';
+@import 'base/tables';
 @import 'base/forms';
 @import 'base/layout';
 @import 'base/classes';
@@ -26,3 +27,4 @@
 
 @import 'pages/base';
 @import 'pages/demo';
+@import 'pages/grid';

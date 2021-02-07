@@ -1,12 +1,88 @@
 <!DOCTYPE html>
-<html lang="en" id="demo">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
   </head>
 
-  <body id="grid"></body>
+  <body>
+    <div class="bootstrap-wrapper">
+      <div class="container-fluid">
+        <div class="row small-gutters">
+          <div class="col-sm-4">.col-md-4</div>
+          <div class="col-sm-4">.col-md-4</div>
+          <div class="col-sm-4">.col-md-4</div>
+        </div>
+        <div class="row small-gutters">
+          <div class="col-sm-3">.col-sm-3</div>
+          <div class="col-sm-3">.col-sm-3</div>
+          <div class="col-sm-3">.col-sm-3</div>
+          <div class="col-sm-3">.col-sm-3</div>
+        </div>
+        <div class="row small-gutters">
+          <div class="col-sm-2">.col-sm-2</div>
+          <div class="col-sm-2">.col-sm-2</div>
+          <div class="col-sm-2">.col-sm-2</div>
+          <div class="col-sm-2">.col-sm-2</div>
+          <div class="col-sm-2">.col-sm-2</div>
+          <div class="col-sm-2">.col-sm-2</div>
+        </div>
+        <div class="row small-gutters">
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+          <div class="col-sm-1">.col-sm-1</div>
+        </div>
+        <div class="row hidden-sm-down small-gutters">
+          <!-- Hidden on small screens -->
+          <div class="col-md-6">.col-md-6</div>
+          <div class="col-md-6">.col-md-6</div>
+        </div>
+        <div class="row small-gutters">
+          <div class="col-sm-3 col-xs-12">
+            <img
+              src="https://via.placeholder.com/1000x700?text=.img-fluid"
+              class="img-fluid"
+              alt="Responsive Image Demo"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <img
+              src="https://via.placeholder.com/1000x700"
+              class="img-fluid"
+              alt="Responsive Image Demo"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <img
+              src="https://via.placeholder.com/1000x700?text=.img-fluid"
+              class="img-fluid"
+              alt="Responsive Image Demo"
+            />
+          </div>
+          <div class="col-sm-3 col-xs-12">
+            <img
+              src="https://via.placeholder.com/1000x700"
+              class="img-fluid"
+              alt="Responsive Image Demo"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

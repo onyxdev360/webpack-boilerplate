@@ -1,0 +1,43 @@
+/*
+ nested list
+*/
+ul li ul {
+  margin-bottom: 0;
+}
+
+ul,
+ol,
+dl {
+  margin-bottom: 2.4em;
+}
+
+/*
+ nested sizes
+*/
+li li,
+li p {
+  font-size: 1em;
+}
+/*
+ additional list formatting
+*/
+ul,
+ol {
+  margin-left: 2em;
+}
+/* nested */
+li ul,
+li ol {
+  margin-left: 0;
+}
+li ul li {
+  list-style-type: circle;
+}
+ul li {
+  list-style-type: disc;
+}
+
+p,
+dd {
+  margin-bottom: 1.8462em;
+}

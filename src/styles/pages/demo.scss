@@ -5,15 +5,22 @@ $font-color: #dae0e0;
 $page-width: 650px;
 
 #demo {
-  font-size: $font-size;
-  font-family: $font-family;
-  background: $background-color;
-  color: $font-color;
-  max-width: $page-width;
-  line-height: 1.4;
+  font-size: $font-size !important;
+  font-family: $font-family !important;
+  color: $font-color !important;
+  max-width: $page-width !important;
+  line-height: 1.4 !important;
+
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+    color: $font-color !important;
+  }
+
   body {
     margin: 0;
     width: 100vw;
+    background: $background-color !important;
 
     & #root {
       display: flex;

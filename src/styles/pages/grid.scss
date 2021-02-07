@@ -1,0 +1,26 @@
+[class^='col-'] {
+  background-color: pink;
+}
+
+.row.small-gutters {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row.small-gutters > [class^='col-'],
+.row.small-gutters > [class*=' col-'] {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid $color-grey-dark-2;
+}
+
+.row.small-gutters > [class^='col-']:not(:last-of-type),
+.row.small-gutters > [class*=' col-']:not(:last-of-type) {
+  border-right: none;
+}
+
+.row.small-gutters:not(:last-of-type) > [class^='col-'],
+.row.small-gutters:not(:last-of-type) > [class*=' col-'] {
+  border-bottom: none;
+}
