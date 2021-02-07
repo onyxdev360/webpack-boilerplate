@@ -1,0 +1,6 @@
+/// Function that outputs !important as required
+/// @param {boolean} $important - flag to indicate if property should be !important
+/// @return '!important' if {true} else ''
+@function if-important($important) {
+  @return #{if($important, '!important', '')};
+}

@@ -1,0 +1,149 @@
+/// center text
+.u-center-text {
+  text-align: center !important;
+}
+
+/// add extra small margin to bottom
+.u-margin-bottom-xs {
+  margin-bottom: 0.75rem !important;
+}
+
+/// add small margin to bottom
+.u-margin-bottom-sm {
+  margin-bottom: 1.5rem !important;
+}
+
+/// add medium margin to bottom
+.u-margin-bottom-md {
+  margin-bottom: 3.5rem !important;
+  @include respond-margin-bottom(tabport, 3rem, true);
+}
+
+/// add large margin to bottom
+.u-margin-bottom-lg {
+  margin-bottom: 6rem !important;
+  @include respond-margin-bottom(tabport, 4rem, true);
+}
+
+/// remove margin from top
+.u-margin-top-none {
+  margin-top: 0rem !important;
+}
+
+/// add medium margin to top
+.u-margin-top-md {
+  margin-top: 3.5rem !important;
+  @include respond-margin-top(tabport, 3rem, true);
+}
+
+/// add large margin to top
+.u-margin-top-lg {
+  margin-top: 8rem !important;
+}
+
+/// add extra large margin to top
+.u-margin-top-xlg {
+  margin-top: 9rem !important;
+}
+
+/// add very large margin to top
+.u-margin-top-xxlg {
+  margin-top: 15rem !important;
+}
+
+/// remove all padding from top
+.u-padding-top-none {
+  padding-top: 0rem !important;
+}
+
+/// add extra small padding to top
+.u-padding-top-xs {
+  padding-top: 0.75rem !important;
+}
+
+/// add small padding to top
+.u-padding-top-sm {
+  padding-top: 1.5rem !important;
+}
+
+/// add medium padding to top
+.u-padding-top-md {
+  padding-top: 3.5rem !important;
+  @include respond-padding-top(tabport, 3rem, true);
+}
+
+/// add large padding to top
+.u-padding-top-lg {
+  padding-top: 6rem !important;
+  @include respond-padding-top(tabport, 4rem, true);
+}
+
+/// add extra large padding to top
+.u-padding-top-xlg {
+  padding-top: 9rem !important;
+  @include respond-padding-top(tabport, 7rem, true);
+}
+
+/// remove all padding from bottom
+.u-padding-bottom-none {
+  padding-bottom: 0rem !important;
+}
+
+/// add extra small padding to bottom
+.u-padding-bottom-xs {
+  padding-bottom: 0.75rem !important;
+}
+
+/// add small padding to bottom
+.u-padding-bottom-sm {
+  padding-bottom: 1.5rem !important;
+}
+
+.u-padding-bottom-md {
+  padding-bottom: 3.5rem !important;
+  @include respond-padding-bottom(tabport, 3rem, true);
+}
+
+/// add large padding to bottom
+.u-padding-bottom-lg {
+  padding-bottom: 6rem !important;
+  @include respond-padding-bottom(tabport, 4rem, true);
+}
+
+/// add extra large padding to bottom
+.u-padding-bottom-xlg {
+  padding-bottom: 9rem !important;
+  @include respond-padding-bottom(tabport, 7rem, true);
+}
+
+/// set width to 100%
+u-width-100 {
+  width: 100%;
+}
+
+/// make container display inline block
+.u-inline-block-container {
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/// make container display block
+.u-block-container {
+  display: block !important;
+  position: relative !important;
+}
+
+/// set display: none
+.hide {
+  display: none;
+}
+
+/// set display: block
+.show {
+  display: block;
+}
+
+/// clearfix
+.clearfix {
+  @include clearfix();
+}

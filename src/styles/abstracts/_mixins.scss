@@ -1,0 +1,282 @@
+@mixin clearfix {
+  /// clearfix
+  /// -- http://css-tricks.com/snippets/css/clear-fix/
+  .clearfix:before,
+  .clearfix:after,
+  .row:before,
+  .row:after,
+  .container:before,
+  .container:after {
+    content: '';
+    display: table;
+  }
+  .clearfix:after,
+  .row:after,
+  .container:after {
+    clear: both;
+  }
+}
+
+/// mixin - position element in center of relative parent or nearest relative positioned container
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/// mixin - position element in horizontal center of relative parent or nearest relative positioned container
+@mixin absolute-horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/// mixin - position element in center of parent
+@mixin center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/// mixin - position element in horizontal center of parent
+@mixin relative-horizontal-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/// MEDIA QUERY MANAGER
+///
+/// 0 - 600px:      Phone
+/// 600 - 900px:    Tablet portrait
+/// 900 - 1200px:   Tablet landscape
+/// 1800px + :      Big desktop
+/// [1200 - 1800] is where our normal styles apply
+
+/// $breakpoint arguement choices:
+/// - phone
+/// - tabport
+///- tabland
+///- bigscreen
+///
+///ORDER: Base + typography > general layout + grid > page layout > components
+///
+///1em = 16px
+
+///EXAMPLE:
+/// @include respond($breakpoint) {
+/// }
+
+/// @include respond(tabland) {
+/// }
+///
+/// @include respond(tabport) {
+/// }
+
+/// @include respond(phone) {
+/// }
+/// */
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+
+  @if $breakpoint==tabport {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+
+  @if $breakpoint==tabland {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (min-width: 75em) {
+      @content;
+    } //1200px
+  }
+
+  @if $breakpoint==bigscreen {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}
+
+/// ---------------------------------------------------------------------------------------------- */
+/// MARGIN                                                                                         */
+/// ---------------------------------------------------------------------------------------------- */
+/// mixin - responsive margin - usage: @include respond-margin(tabport, 5rem, true)
+@mixin respond-margin($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin: $value if-important($important);
+  }
+}
+
+/// mixin - responsive left margin - usage: @include respond-margin-left(tabport, 5rem, true)
+@mixin respond-margin-left($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-left: $value if-important($important);
+  }
+}
+
+/// mixin - responsive right margin - usage: @include respond-margin-right(tabport, 5rem, true)
+@mixin respond-margin-right($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-right: $value if-important($important);
+  }
+}
+
+/// mixin - responsive left and right margin - usage: @include respond-margin-horizontal(tabport, 5rem, true)
+@mixin respond-margin-horizontal($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-left: $value if-important($important);
+    margin-right: $value if-important($important);
+  }
+}
+
+/// mixin - responsive top margin - usage: @include respond-margin-top(tabport, 5rem, true)
+@mixin respond-margin-top($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-top: $value if-important($important);
+  }
+}
+
+/// mixin - responsive bottom margin - usage: @include respond-margin-bottom(tabport, 5rem, true)
+@mixin respond-margin-bottom($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-bottom: $value if-important($important);
+  }
+}
+
+/// mixin - responsive top and bottom margin - usage: @include respond-margin-vertical(tabport, 5rem, true)
+@mixin respond-margin-vertical($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    margin-top: $value if-important($important);
+    margin-bottom: $value if-important($important);
+  }
+}
+
+/// ---------------------------------------------------------------------------------------------- */
+/// PADDING                                                                                        */
+/// ---------------------------------------------------------------------------------------------- */
+/// mixin - responsive padding - usage: @include respond-padding(tabport, 5rem, true)
+@mixin respond-padding($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding: $value if-important($important);
+  }
+}
+
+/// mixin - responsive left padding - usage: @include respond-padding-left(tabport, 5rem, true)
+@mixin respond-padding-left($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-left: $value if-important($important);
+  }
+}
+
+/// mixin - responsive right padding - usage: @include respond-padding-right(tabport, 5rem, true)
+@mixin respond-padding-right($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-right: $value if-important($important);
+  }
+}
+
+/// mixin - responsive left and right padding - usage: @include respond-padding-horizontal(tabport, 5rem, true)
+@mixin respond-padding-horizontal($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-left: $value if-important($important);
+    padding-right: $value if-important($important);
+  }
+}
+
+/// mixin - responsive top padding - usage: @include respond-padding-top(tabport, 5rem, true)
+@mixin respond-padding-top($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-top: $value if-important($important);
+  }
+}
+
+/// mixin - responsive bottom padding - usage: @include respond-padding-bottom(tabport, 5rem, true)
+@mixin respond-padding-bottom($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-bottom: $value if-important($important);
+  }
+}
+
+/// mixin - responsive top and bottom padding - usage: @include respond-padding-vertical(tabport, 5rem, true)
+@mixin respond-padding-vertical($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    padding-top: $value if-important($important);
+    padding-bottom: $value if-important($important);
+  }
+}
+
+/// ---------------------------------------------------------------------------------------------- */
+/// WIDTH                                                                                          */
+/// ---------------------------------------------------------------------------------------------- */
+/// mixin - responsive width - usage: @include respond-width(tabport, 5rem, true)
+@mixin respond-width($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    width: $value if-important($important);
+  }
+}
+
+/// mixin - responsive max width - usage: @include respond-max-width(tabport, 5rem, true)
+@mixin respond-max-width($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    max-width: $value if-important($important);
+  }
+}
+
+/// ---------------------------------------------------------------------------------------------- */
+/// FONT AND TEXT                                                                                          */
+/// ---------------------------------------------------------------------------------------------- */
+
+/// mixin - responsive font sizes - usage: @include respond-font-size-all(1rem, 2rem, 3rem, 4rem)
+/// set all font-sizes for defined breakpoints
+/// recommended use: in base set up of html or body element so that values are inherited
+@mixin respond-font-size-all(
+  $font-size-phone,
+  $font-size-tablet-portrait,
+  $font-size-tablet-landscape,
+  $font-size-desktop
+) {
+  @include respond(bigscreen) {
+    font-size: $font-size-desktop;
+  }
+
+  @include respond(tabland) {
+    font-size: $font-size-tablet-landscape;
+  }
+
+  @include respond(tabport) {
+    font-size: $font-size-tablet-portrait;
+  }
+
+  @include respond(phone) {
+    font-size: $font-size-phone;
+  }
+}
+
+/// mixin - responsive font sizes - usage: @include respond-font-size(1rem)
+/// set font-size for defined breakpoint
+@mixin respond-font-size($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    font-size: $value if-important($important);
+  }
+}
+
+/// mixin - responsive letter spacing - usage: @include respond-letter-spacing(1.5)
+/// set letter-spacing for defined breakpoint
+@mixin respond-letter-spacing($breakpoint, $value, $important: false) {
+  @include respond($breakpoint) {
+    letter-spacing: $value if-important($important);
+  }
+}

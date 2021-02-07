@@ -1,0 +1,55 @@
+/* Buttons */
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: initial;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 7rem;
+    transition: all 0.2s;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    white-space: nowrap;
+    @include respond(tabport) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.btn-white-outline {
+  color: $color-white;
+  border: 2px solid $color-white !important;
+  border-radius: 0.7rem !important;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-grey-dark-1;
+  }
+}
+
+.btn-primary {
+  color: $color-white;
+  background-color: $color-grey-dark-1;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-grey-dark-1;
+  }
+}
+
+.btn-secondary {
+  color: $color-white;
+  background-color: $color-grey-dark-1;
+
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    color: $color-grey-dark-1;
+  }
+}
