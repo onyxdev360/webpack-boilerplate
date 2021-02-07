@@ -7,7 +7,10 @@ const paths = require('./paths')
 
 module.exports = {
   // Where webpack looks to start building the bundle
-  entry: [paths.src + '/index.ts'],
+  entry: {
+    index: paths.src + '/index.ts',
+    grid: paths.src + '/grid.ts',
+  },
 
   // Where webpack outputs the assets and bundles
   output: {
@@ -38,10 +41,22 @@ module.exports = {
     // Generates an HTML file from a template
     // Generates deprecation warning: https://github.com/jantimon/html-webpack-plugin/issues/1501
     new HtmlWebpackPlugin({
+      filename: 'index.html',
+      chunks: ['index'],
       title: 'webpack Boilerplate',
+      description: 'demo',
       favicon: paths.src + '/images/favicon.png',
-      template: paths.src + '/template.html', // template file
-      filename: 'index.html', // output file
+      template: paths.src + '/templates/template.html', // template file
+      minify: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'grid.html',
+      chunks: ['grid'],
+      title: 'webpack Boilerplate',
+      description: 'demo',
+      favicon: paths.src + '/images/favicon.png',
+      template: paths.src + '/templates/grid.html', // template file
+      minify: false,
     }),
 
     // ESLint configuration
