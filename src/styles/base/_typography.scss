@@ -1,8 +1,8 @@
 .heading-primary {
-  color: $color-white;
-  text-transform: uppercase;
+  color: $color-grey-dark-2;
+  text-transform: normal;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 
   &--main {
     display: block;
@@ -49,7 +49,7 @@
 .heading-small {
   font-size: 1.2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: normal;
 }
 
 .paragraph {
