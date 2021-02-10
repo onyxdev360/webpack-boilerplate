@@ -50,5 +50,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:onyxdev360/webpack-boilerplate"
+  },
+  "dependencies": {
+    "bootstrap-utilities": "^4.1.3"
   }
 }
