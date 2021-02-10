@@ -15,4 +15,4 @@ const heading = document.getElementById('heading')
 heading.innerText = example()
 
 const app = document.querySelector('#root')
-app.append(logo, heading)
+app.append(heading, logo)

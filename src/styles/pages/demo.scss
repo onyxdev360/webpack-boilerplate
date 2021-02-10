@@ -1,18 +1,16 @@
-$font-size: 1rem;
 $font-family: 'Inter', sans-serif;
-$background-color: #121212;
-$font-color: #dae0e0;
+$background-color: $color-primary-2;
+$font-color: $color-grey-light-2;
 $page-width: 650px;
 
 #demo {
-  font-size: $font-size !important;
   font-family: $font-family !important;
   color: $font-color !important;
   max-width: $page-width !important;
   line-height: 1.4 !important;
 
   h1 {
-    font-size: 1.5rem !important;
+    font-size: 150% !important;
     line-height: 1.4 !important;
     color: $font-color !important;
   }
@@ -21,14 +19,15 @@ $page-width: 650px;
     margin: 0;
     width: 100vw;
     background: $background-color !important;
+    overflow: hidden;
 
     & #root {
       display: flex;
       align-items: center;
-      justify-content: center;
+      // justify-content: space-evenly;
       flex-direction: column;
       align-self: center;
-      height: 100vh;
+      height: 40vh;
 
       & h1.heading {
         margin: auto;

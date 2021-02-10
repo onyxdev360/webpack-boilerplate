@@ -17,7 +17,13 @@
 
 .row.demo-row > [class^='col-']:not(:last-of-type),
 .row.demo-row > [class*=' col-']:not(:last-of-type) {
-  border-right: none;
+  @media only screen and (min-width: 36em) {
+    border-right: none;
+  } //576px
+
+  @media only screen and (max-width: 36em) {
+    border-bottom: none;
+  } //576px
 }
 
 .row.demo-row:not(:last-of-type) > [class^='col-'],
